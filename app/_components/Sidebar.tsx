@@ -36,12 +36,12 @@ const Sidebar = () => {
             </nav>
             {/* Bottom side of the sidebar */}
             <div className="mt-auto flex flex-col gap-2">
-                <a className="flex items-center gap-3 p-3 rounded-sm hover:bg-gray-100 cursor-pointer text-gray-500">
+                <a className="flex items-center gap-3 p-3 rounded-sm hover:bg-gray-100 cursor-pointer text-gray-700">
                     <User size={20} />
                     Profile
                 </a>
                 
-                <a className="flex items-center gap-3 p-3 rounded-sm hover:bg-gray-100 cursor-pointer text-gray-500">
+                <a className="flex items-center gap-3 p-3 rounded-sm hover:bg-gray-100 cursor-pointer text-gray-700">
                     <LogOut size={20} />
                     LogOut
                 </a>

@@ -29,7 +29,7 @@ const OverviewCards = () => {
                 <p className="mt-4 text-3xl font-bold">300</p>
             </div>
 
-          <div className="border border-gray-300 rounded-lg p-5 bg-gradient-to-l from-blue-900 to-cyan-700 6text-white">
+          <div className="border border-gray-300 rounded-lg p-5 bg-gradient-to-l from-blue-900 to-cyan-700 text-white">
                 <div className="flex items-center justify-between">
                     <h3 className="text-white">Revenue</h3>
                     <DollarSign className="text-white" />
@@ -37,16 +37,16 @@ const OverviewCards = () => {
                 <p className="mt-4 text-3xl font-bold">12,759</p>
             </div>
 
-            <div className="col-span-3 border border-gray-300 rounded-lg p-5 bg-gradient-to-l from-blue-800 to-cyan-300 mt-3 h-25">
-            </div>
-                 
-            <div className="border border-gray-300 rounded-lg p-5 bg-gradient-to-l from-blue-900 to-cyan-700 h-25 mt-3 ">
+           <div className="col-span-1 md:col-span-2 xl:col-span-3 border border-gray-300 rounded-lg p-5 bg-gradient-to-l from-blue-800 to-cyan-300 mt-3 h-24">
+           </div>
+
+            <div className="col-span-1 md:col-span-2 xl:col-span-1 border border-gray-300 rounded-lg p-5 bg-gradient-to-l from-blue-900 to-cyan-700 mt-3 h-24">
             </div>
 
-            <div className="col-span-2 border border-gray-300 rounded-lg p-5 bg-gradient-to-l from-blue-900 to-cyan-700 h-35 mt-3 ">
+            <div className="col-span-1 md:col-span-2 xl:col-span-2 border border-gray-300 rounded-lg p-5 bg-gradient-to-l from-blue-900 to-cyan-700 mt-3 h-36">
             </div>
-            
-            <div className="col-span-2 border border-gray-300 rounded-lg p-5 bg-gradient-to-l from-blue-900 to-cyan-700 h-35 mt-3 ">
+
+            <div className="col-span-1 md:col-span-2 xl:col-span-2 border border-gray-300 rounded-lg p-5 bg-gradient-to-l from-blue-900 to-cyan-700 mt-3 h-36">
             </div>
         </section>
     )
