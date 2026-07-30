@@ -1,34 +1,43 @@
-import type { Metadata } from "next";
+'use client'
+
+import { useState } from "react";
 import "./globals.css";
 import Sidebar from "./_components/Sidebar";
 import Navbar from "./_components/Navbar";
 import Footer from "./_components/Footer";
 
-export const metadata: Metadata = {
-  title: "Simple Dashboard",
-  description: "I built this dashboard from scratch",
-};
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
   return (
-    <html
-      lang="en">
+    <html lang="en">
       <body>
-        <div className="flex min-h-screen overflow-hidden">
-          <Sidebar />
+        <div className="flex min-h-screen">
+
+          <Sidebar isSidebarOpen={isSidebarOpen} />
+
           <div className="flex-1 flex flex-col">
-            <Navbar />
+
+            <Navbar 
+              setIsSidebarOpen={setIsSidebarOpen}
+            />
+
             <main className="flex-1 overflow-auto">
               {children}
             </main>
+
             <Footer />
+
           </div>
+
         </div>
-        </body>
+      </body>
     </html>
   );
 }
