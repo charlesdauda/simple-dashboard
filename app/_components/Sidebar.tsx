@@ -4,7 +4,7 @@ import { BarChart3, LayoutDashboard, LogOut, Package, Settings, User, Users } fr
 const Sidebar = () => {
 
     return (
-        <aside className="flex flex-col w-56 lg:w-64 h-screen border-r border-gray-300 p-5 flex-shrink-0">
+        <aside className="flex flex-col w-56 lg:w-64 min-h-screen border-r border-gray-300 p-5 flex-shrink-0">
             <div className="mb-10">
                 <h1 className="text-2xl font-extrabold text-blue-950 mt-4">Admin Dashboard</h1>
             </div>
