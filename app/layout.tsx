@@ -13,25 +13,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const [isSidebarExpanded, setIsSidebarExpanded] = useState(false);
 
   return (
     <html lang="en">
       <body>
         <div className="flex min-h-screen">
-         <Sidebar
-              isSidebarOpen={isSidebarOpen}
-              setIsSidebarOpen={setIsSidebarOpen}
-            />
-            {isSidebarOpen && (
-              <div
-              className="fixed inset-0 bg-black/40 z-40 lg:hidden"
-              onClick={() => setIsSidebarOpen(false)}
-              />
-)}
+          <Sidebar
+            isSidebarExpanded={isSidebarExpanded}
+            setIsSidebarExpanded={setIsSidebarExpanded}
+          />
           <div className="flex-1 flex flex-col">
-            <Navbar 
-              setIsSidebarOpen={setIsSidebarOpen}
+            <Navbar
+              setIsSidebarExpanded={setIsSidebarExpanded}
             />
             <main className="flex-1 overflow-auto">
               {children}
