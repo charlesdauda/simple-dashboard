@@ -13,13 +13,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
-
   const [isSidebarExpanded, setIsSidebarExpanded] = useState(false);
-
   return (
     <html lang="en">
       <body>
-        <div className="flex min-h-screen">
+        <div className="flex h-screen overflow-hidden">
           <Sidebar
             isSidebarExpanded={isSidebarExpanded}
             setIsSidebarExpanded={setIsSidebarExpanded}
@@ -28,10 +26,12 @@ export default function RootLayout({
             <Navbar
               setIsSidebarExpanded={setIsSidebarExpanded}
             />
-            <main className="flex-1 overflow-auto">
+            <main className="flex-1 overflow-y-auto ml-20 lg:ml-0">
               {children}
             </main>
-            <Footer />
+            <div className="ml-20 lg:ml-0">
+              <Footer />
+            </div>
           </div>
         </div>
       </body>
