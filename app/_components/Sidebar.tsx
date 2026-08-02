@@ -64,9 +64,9 @@ const Sidebar = ({ isSidebarExpanded, setIsSidebarExpanded }: SidebarProps)=>{
      
          const SidebarItem = ({ icon, text, showText }:{ icon:React.ReactNode; text:string; showText:boolean; })=>{
           return (
-          <a className={`flex items-center gap-3 p-3 rounded-sm hover:bg-gray-100 cursor-pointer text-gray-700 ${!showText && "justify-center"}`}>
-            {icon}{
-            showText && (<span>{text}</span>)}
+          <a className={`flex items-center gap-3 p-3 rounded-sm hover:bg-gray-100 cursor-pointer text-gray-700 ${!showText ? "justify-center lg:justify-start" : "lg:justify-start"}`}>
+            {icon}
+            <span className={`${showText ? "inline" : "hidden"} lg:inline`}>{text}</span>
             </a>
             )}
 
