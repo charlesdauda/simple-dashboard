@@ -34,9 +34,7 @@ const Sidebar = ({ isSidebarExpanded, setIsSidebarExpanded }: SidebarProps)=>{
           <div className="mb-10">
             <h1 className="hidden lg:block text-2xl font-extrabold text-blue-950 mt-4">Admin Dashboard</h1>
             <div className="flex items-center justify-between mt-4 lg:hidden">
-              {isSidebarExpanded && (
                 <h1 className="text-2xl font-extrabold text-blue-950">AD</h1>
-              )}
               {isSidebarExpanded && (
                 <button onClick={()=>setIsSidebarExpanded(false)} 
                 className="p-2 rounded-md hover:bg-gray-100">
